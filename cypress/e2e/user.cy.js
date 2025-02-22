@@ -36,19 +36,18 @@ const selectorsList = {
     cy.get(selectorsList.genericField).eq(5).clear().type('DriverLicense')
     cy.get(selectorsList.dateField).eq(0).type('2021-05-12')
     cy.get(selectorsList.dateCloseButton).click()
-    cy.get(selectorsList.genericCheckBox).eq(0)
-    cy.get(selectorsList.genericCheckBox).eq(1).type('Married')
+    cy.get(selectorsList.genericCheckBox).eq(0).click()
+    cy.get('.oxd-select-dropdown > :nth-child(27)').click()
+    cy.get(selectorsList.genericCheckBox).eq(1).click()
+    cy.get('.oxd-select-dropdown > :nth-child(4)').click()
     cy.get(selectorsList.dateField).eq(1).type('2021-03-01')
     cy.get(selectorsList.dateCloseButton).click()
     cy.get(selectorsList.genderBox).eq(1).click()
     cy.get(selectorsList.buttonSave).eq(0).click()
-    cy.get(selectorsList.genericCheckBox).eq(2).type('O+')
+    cy.get(selectorsList.genericCheckBox).eq(2).click()
+    cy.get('.oxd-select-dropdown > :nth-child(6)').click()
     cy.get(selectorsList.testField).clear().type('Aprove')
     cy.get(selectorsList.buttonSave).eq(1).click()
-
-
-
-    
   })
 
     it('Login - Fail', () => {
